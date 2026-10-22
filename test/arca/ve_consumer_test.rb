@@ -62,7 +62,7 @@ module Arca
                 incluir_adjuntos: true
               })
         .returns(code: 200,
-                 headers: { "Content-Type" => "multipart/related; boundary=\"#{boundary}\"" },
+                 headers: { "content-type" => "multipart/related; boundary=\"#{boundary}\"" },
                  body: multipart_body)
       r = ws.consumir_comunicacion(12_061_068, incluir_adjuntos: true)
       assert_equal 1, r[:adjuntos].size

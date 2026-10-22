@@ -36,5 +36,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'builder'
   s.add_dependency 'httpclient'
   s.add_dependency 'nokogiri'
-  s.add_dependency 'savon', '~> 2.15.0'
+  s.add_dependency 'savon', '~> 2.15'
 end
