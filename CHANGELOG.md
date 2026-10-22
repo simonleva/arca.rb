@@ -1,12 +1,18 @@
-# Arca Changelog
+# Changelog
 
-## [1.1.3] - 2026-07-29
+## 1.1.4
+
+- `savon` desde 2.15 en adelante, así se puede instalar 2.17.2 o posterior, que corrige CVE-2026-53510.
+- WSRGIVA en producción usa la dirección correcta del WSDL.
+- README reescrito; los links de la gema apuntan a github.com/simonleva/arca.rb.
+
+## 1.1.3
 
 - **Seguridad:** Actualización de dependencias con vulnerabilidades conocidas (`nokogiri`, `rack`, `addressable`, `net-imap`, `json`, `concurrent-ruby`, `faraday`, `activesupport`).
 - **Seguridad:** Fuente de gems cambiada a HTTPS (`https://rubygems.org`).
 - **CI:** Permisos explícitos de `GITHUB_TOKEN` con `contents: read` (principio de mínimo privilegio).
 
-## [1.1.2] 2025-03-02
+## 1.1.2
 
 - **VEConsumer** — Nuevo servicio: Ventanilla Electrónica - Consumir Comunicaciones (`veconsumerws`). Permite consultar y leer comunicaciones enviadas a un contribuyente vía SOAP 1.2.
   - `consultar_comunicaciones(filter = {})` — consulta paginada con filtros opcionales (estado, fechas, sistema publicador, referencias, etc.).
@@ -15,27 +21,27 @@
   - `consultar_estados` — lista los posibles estados (1=No leída, 2=Leída).
   - Los errores SOAP Fault del servicio se traducen a `ResponseError` con soporte para `e.code?`.
 
-## [1.1.1] - 2025-02-20
+## 1.1.1
 
 - **WSFE:** Agregado `tipos_condicion_iva_receptor(clase_cmp: nil)` para consultar condiciones de IVA del receptor con filtro opcional por clase de comprobante.
 - **WSFE:** Agregado `actividades` para obtener el listado de actividades económicas.
 - **WSFE:** Agregado `consultar_caea_sin_movimientos(caea, pto_vta)` para consultar CAEA sin movimientos.
 
-## [1.1.0]
+## 1.1.0
 
 - **WSAA:** Store opcional para TA. Podés pasar `store:` con un objeto que implemente `read(cuit:, env:, service:)` y `write(cuit:, env:, service:, ta:, expires_at:)` para guardar el token en tu backend (p. ej. DB por tenant con cifrado). Sin `store`, se sigue usando el archivo JSON en `tmp/`.
 
-## [1.0.2] - 2025-02-09
+## 1.0.2
 
 - **Errores:** En WSAA, `persist_ta` ahora encapsula fallos en `Arca::ServerError` en lugar de re-levantar excepciones crudas (mejor encapsulación y menos riesgo de filtrar datos sensibles en logs).
 - **Test:** Añadido test que verifica que `persist_ta` levanta `ServerError` con la excepción original en `cause`.
 - Actualización de gems/dependencias.
 
-## [1.0.1] - 2025-02-05
+## 1.0.1
 - Fix ruta hardcodeada de certificados SSL CA. Usar OpenSSL::X509::DEFAULT_CERT_FILE en lugar de la ruta hardcodeada
 /etc/ssl/certs/ca-certificates.crt para soportar múltiples plataformas.
 
-## [1.0.0] - 2025-01-31
+## 1.0.0
 
 - Primer release.
 - Cliente Ruby para webservices de ARCA. Requiere Ruby >= 3.4.4.

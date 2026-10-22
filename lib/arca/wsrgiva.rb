@@ -7,7 +7,7 @@ module Arca
   class WSRGIVA
     WSDL = {
       development: "https://fwshomo.afip.gov.ar/wsrgiva/services/RegimenPercepcionIVAService?wsdl",
-      production: "https://serviciosjava.afip.gov.ar/wsrgiva/services/RegimenPercepcionIVAService?wdsl",
+      production: "https://serviciosjava.afip.gov.ar/wsrgiva/services/RegimenPercepcionIVAService?wsdl",
       test: "#{Root}/test/fixtures/wsrgiva/wsrgiva.wsdl"
     }.freeze
 
