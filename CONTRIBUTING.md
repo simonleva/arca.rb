@@ -22,7 +22,7 @@ Tests live under `test/` with `*_test.rb` files. Most examples use stubbed SOAP 
 
 - Push your branch: `git push origin main` (or your branch name).
 - **CI** (`.github/workflows/ci.yml`) runs on every push: it installs dependencies and runs `bundle exec rake` (tests). Ensure tests pass before releasing.
-- View runs: **Actions** tab at https://github.com/arcakit/arca.rb/actions.
+- View runs: **Actions** tab at https://github.com/simonleva/arca.rb/actions.
 
 ## Publishing to RubyGems via CI
 
@@ -31,7 +31,7 @@ Releases use the official [rubygems/release-gem](https://github.com/rubygems/rel
 ### One-time setup: Trusted Publishing
 
 1. On RubyGems.org: log in → your gem **arca** → **Publishing** (or **Edit gem**) → add a **Trusted publisher**.
-2. Choose **GitHub Actions** and link this repo: `arcakit/arca.rb` (or your fork). Follow [RubyGems: Adding a publisher](https://guides.rubygems.org/trusted-publishing/adding-a-publisher/).
+2. Choose **GitHub Actions** and link this repo: `simonleva/arca.rb` (or your fork). Follow [RubyGems: Adding a publisher](https://guides.rubygems.org/trusted-publishing/adding-a-publisher/).
 3. No GitHub secrets are needed; the action uses OIDC to authenticate to RubyGems.
 
 ### Release steps
@@ -44,5 +44,5 @@ Releases use the official [rubygems/release-gem](https://github.com/rubygems/rel
   - [ ] Open **Actions** → **Release** → **Run workflow**. Select the branch (e.g. `main`) and run.
   - [ ] The workflow runs tests, then [rubygems/release-gem](https://github.com/rubygems/release-gem) runs `rake release`: builds the gem, pushes to RubyGems.org, and creates/pushes the tag (e.g. `v1.0.1`).
 - **After publish**
-  - [ ] Create a GitHub release at https://github.com/arcakit/arca.rb/releases (optional; tag is already pushed).
+  - [ ] Create a GitHub release at https://github.com/simonleva/arca.rb/releases (optional; tag is already pushed).
   - [ ] Bump `lib/arca/version.rb` to a prerelease if you use one (e.g. `1.0.2.dev`).

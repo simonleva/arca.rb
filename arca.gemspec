@@ -9,8 +9,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.required_ruby_version = '>= 3.3.4'
   s.authors     = [ 'Simon Lev' ]
-  s.email       = [ 'hola@arcakit.dev' ]
-  s.homepage    = 'https://github.com/simonlev/arca.rb'
+  s.homepage    = 'https://github.com/simonleva/arca.rb'
   s.summary     = 'Cliente Ruby para webservices de AFIP/ARCA: facturación electrónica, comprobantes y servicios tributarios de Argentina'
   s.description = 'Cliente Ruby para integrar webservices SOAP de ARCA/AFIP en Argentina.'
   s.license     = 'MIT'
@@ -20,9 +19,9 @@ Gem::Specification.new do |s|
   s.require_paths = [ 'lib' ]
 
   s.metadata = {
-    'source_code_uri' => 'https://github.com/arcakit/arca.rb',
-    'bug_tracker_uri' => 'https://github.com/arcakit/arca.rb/issues',
-    'changelog_uri' => 'https://github.com/arcakit/arca.rb/blob/main/CHANGELOG.md',
+    'source_code_uri' => 'https://github.com/simonleva/arca.rb',
+    'bug_tracker_uri' => 'https://github.com/simonleva/arca.rb/issues',
+    'changelog_uri' => 'https://github.com/simonleva/arca.rb/blob/main/CHANGELOG.md',
     'rubygems_mfa_required' => 'true'
   }
 
